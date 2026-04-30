@@ -2,6 +2,7 @@
 
 This is a C++/clang-cl port of Discord Drover's `version.dll` proxy shim and a small console installer. ( 100% pure crystal vibecode ).
 Instead of sending  0, 1 before voice initialization, this sends whole fake.bin.
+
 Original is here:  ---> https://github.com/hdrover/discord-drover <---
 
 ## Install

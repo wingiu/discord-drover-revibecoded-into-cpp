@@ -2,7 +2,15 @@
 
 This is a C++/clang-cl port of Discord Drover's `version.dll` proxy shim and a small console installer. ( 100% pure crystal vibecode ) 
 ## Install
-
+Make sure your folder with drover looks like the following:
+```
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        xx.xx.xxxx     xx:xx         166400 drover.exe
+-a----        xx.xx.xxxx     xx:xx             40 drover.ini
+-a----        xx.xx.xxxx     xx:xx           1200 fake.bin
+-a----        xx.xx.xxxx     xx:xx         182784 version.dll
+```
 Close Discord first.
 
 HTTP proxy:
@@ -23,7 +31,7 @@ Direct mode:
 .\drover.exe install direct
 ```
 
-The installer writes `drover.ini` and copies `version.dll` into Discord `app-*` folders next to `Discord.exe`.
+The installer writes `drover.ini` and copies `version.dll` , `fake.bin` into Discord `app-*` folders next to `Discord.exe`.
 It intentionally does not install the DLL next to `Update.exe`.
 
 ## Uninstall

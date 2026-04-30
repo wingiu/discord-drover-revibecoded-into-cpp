@@ -1,6 +1,6 @@
 # Discord Drover C++ Port
 
-This is a C++/clang-cl port of Discord Drover's `version.dll` proxy shim and a small console installer.
+This is a C++/clang-cl port of Discord Drover's `version.dll` proxy shim and a small console installer. ( 100% pure crystal vibecode ) 
 ## Install
 
 Close Discord first.

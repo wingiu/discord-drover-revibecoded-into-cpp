@@ -1,6 +1,43 @@
 # Discord Drover C++ Port
 
 This is a C++/clang-cl port of Discord Drover's `version.dll` proxy shim and a small console installer.
+## Install
+
+Close Discord first.
+
+HTTP proxy:
+
+```powershell
+.\drover.exe install http 127.0.0.1:1080
+```
+
+SOCKS5 proxy:
+
+```powershell
+.\drover.exe install socks5 127.0.0.1:2080
+```
+
+Direct mode:
+
+```powershell
+.\drover.exe install direct
+```
+
+The installer writes `drover.ini` and copies `version.dll` into Discord `app-*` folders next to `Discord.exe`.
+It intentionally does not install the DLL next to `Update.exe`.
+
+## Uninstall
+
+```powershell
+.\drover.exe uninstall --remove-ini
+```
+
+## Notes
+
+- `fake.bin`, if placed next to `drover.exe`, is copied during install and cached by the DLL at runtime.
+- Build artifacts are ignored by `.gitignore`.
+
+
 
 ## Requirements
 
@@ -52,38 +89,3 @@ Output files:
 - `build-clang-msvc\version.dll`
 - `build-clang-msvc\drover.exe`
 
-## Install
-
-Close Discord first.
-
-HTTP proxy:
-
-```powershell
-.\drover.exe install http 127.0.0.1:1080
-```
-
-SOCKS5 proxy:
-
-```powershell
-.\drover.exe install socks5 127.0.0.1:2080
-```
-
-Direct mode:
-
-```powershell
-.\drover.exe install direct
-```
-
-The installer writes `drover.ini` and copies `version.dll` into Discord `app-*` folders next to `Discord.exe`.
-It intentionally does not install the DLL next to `Update.exe`.
-
-## Uninstall
-
-```powershell
-.\drover.exe uninstall --remove-ini
-```
-
-## Notes
-
-- `fake.bin`, if placed next to `drover.exe`, is copied during install and cached by the DLL at runtime.
-- Build artifacts are ignored by `.gitignore`.
